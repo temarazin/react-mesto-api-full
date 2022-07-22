@@ -41,7 +41,8 @@ function App() {
   });
 
   useEffect(() => {
-    api
+    if (loggedIn) {
+      api
       .getPersonalData()
       .then((data) => {
         setCurrentUser(data);
@@ -49,10 +50,12 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
+    }
   }, [loggedIn]);
 
   useEffect(() => {
-    api
+    if (loggedIn) {
+      api
       .getCards()
       .then(({cards}) => {
         setCards(cards);
@@ -60,6 +63,7 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
+    }
   }, [loggedIn]);
 
   useEffect(() => {
