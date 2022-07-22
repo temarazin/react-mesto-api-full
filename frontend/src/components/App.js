@@ -41,6 +41,7 @@ function App() {
   });
 
   useEffect(() => {
+    console.log('loggedIn', loggedIn);
     if (loggedIn) {
       api
       .getPersonalData()
