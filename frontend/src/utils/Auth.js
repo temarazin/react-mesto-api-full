@@ -52,7 +52,7 @@ class Auth {
 }
 
 const authApi = new Auth({
-  baseUrl: "http://temarazinback.nomoredomains.xyz",
+  baseUrl: "https://temarazinback.nomoredomains.xyz",
   headers: {
     "Content-Type": "application/json",
   },
