@@ -8,6 +8,7 @@ const usersRouter = require('./routes/users');
 const cardsRouter = require('./routes/cards');
 const auth = require('./middlewares/auth');
 const cors = require('./middlewares/cors');
+const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { ERR_NOT_FOUND, ERR_SERVER_ERROR } = require('./utils/constants');
 const { login, addUser } = require('./controllers/users');
 
@@ -18,6 +19,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.connect('mongodb://localhost:27017/mestodb');
+
+app.use(requestLogger);
 
 app.post('/signin', celebrate({
   body: Joi.object().keys({
@@ -40,6 +43,8 @@ app.use(auth);
 app.use('/users/', usersRouter);
 app.use('/cards/', cardsRouter);
 app.use((req, res) => { res.status(ERR_NOT_FOUND).send({ message: 'wrong endpoint' }); });
+
+app.use(errorLogger);
 
 app.use(errors());
 
