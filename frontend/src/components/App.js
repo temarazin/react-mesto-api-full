@@ -49,19 +49,18 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [loggedIn]);
 
   useEffect(() => {
     api
       .getCards()
       .then(({cards}) => {
-        console.log('cards: ', cards);
         setCards(cards);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [loggedIn]);
 
   useEffect(() => {
     const jwt = localStorage.getItem("jwt");
@@ -69,7 +68,6 @@ function App() {
       authApi
         .checkToken(jwt)
         .then((data) => {
-          console.log(data);
           setUserEmail(data.email);
           setLoggedIn(true);
         })

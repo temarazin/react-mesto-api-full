@@ -44,7 +44,6 @@ class Auth {
         authorization: `Bearer ${token}`,
       },
     }).then((res) => {
-      console.log(res);
       return this._checkResponse(res, true);
     }).catch((err) => {
       console.log(err);
