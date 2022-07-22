@@ -42,6 +42,7 @@ function App() {
 
   useEffect(() => {
     console.log('loggedIn', loggedIn);
+    console.log('local jwt', localStorage.getItem("jwt"));
     if (loggedIn) {
       api
       .getPersonalData()
