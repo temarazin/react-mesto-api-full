@@ -44,6 +44,8 @@ function App() {
     console.log('loggedIn', loggedIn);
     console.log('local jwt', localStorage.getItem("jwt"));
     if (loggedIn) {
+      api._setToken();
+
       api
       .getPersonalData()
       .then((data) => {
@@ -57,6 +59,8 @@ function App() {
 
   useEffect(() => {
     if (loggedIn) {
+      api._setToken();
+
       api
       .getCards()
       .then(({cards}) => {

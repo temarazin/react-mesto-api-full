@@ -80,6 +80,10 @@ class Api {
       return this._checkResponse(res, true);
     });
   }
+
+  _setToken() {
+    this._headers.authorization = `Bearer ${localStorage.getItem("jwt")}`
+  }
 }
 
 const api = new Api({
