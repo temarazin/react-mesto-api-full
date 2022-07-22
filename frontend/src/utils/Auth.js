@@ -53,7 +53,7 @@ class Auth {
 }
 
 const authApi = new Auth({
-  baseUrl: "http://localhost:3000",
+  baseUrl: "http://temarazinback.nomoredomains.xyz",
   headers: {
     "Content-Type": "application/json",
   },
