@@ -210,10 +210,10 @@ function App() {
           password: password,
         })
         .then((data) => {
-          setLoggedIn(true);
           if (data.token) {
             localStorage.setItem("jwt", data.token);
           }
+          setLoggedIn(true);
           setUserEmail(email);
           history.push("/");
         })
