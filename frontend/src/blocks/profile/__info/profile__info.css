@@ -1,0 +1,15 @@
+.profile__info {
+  margin-left: 30px;
+  margin-right: 30px;
+  min-width: 0; /* Почему-то это сработало */
+}
+
+@media screen and (max-width: 960px) {
+  .profile__info {
+    margin: 26px 0 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

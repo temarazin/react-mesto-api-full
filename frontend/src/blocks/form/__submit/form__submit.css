@@ -1,0 +1,9 @@
+.form__submit {
+  margin-top: 13px;
+}
+
+@media screen and (max-width: 960px) {
+  .form__submit {
+    margin-top: 10px;
+  }
+}

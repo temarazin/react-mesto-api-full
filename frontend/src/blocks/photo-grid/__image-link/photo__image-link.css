@@ -1,0 +1,5 @@
+.photo__image-link {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}

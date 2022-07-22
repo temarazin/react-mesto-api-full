@@ -1,0 +1,6 @@
+.popup__container_type_inform {
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

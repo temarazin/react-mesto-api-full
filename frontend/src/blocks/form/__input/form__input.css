@@ -1,0 +1,21 @@
+/* В макете не предусмотрено место для 2 строк. Ужал как мог. */
+
+.form__input {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-width: 0 0 1px;
+  color: #000;
+  font-size: 14px;
+  padding: 0 0 10px;
+  margin-top: 1px;
+}
+
+.form__input:first-child {
+  margin-top: 0;
+}
+
+/* так, для красоты */
+.form__input:focus {
+  outline: none;
+  border-color: #000;
+}

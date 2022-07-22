@@ -1,0 +1,5 @@
+.header__auth-controls {
+  display: flex;
+  gap: 24px;
+  align-items: baseline;
+}

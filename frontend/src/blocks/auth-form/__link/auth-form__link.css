@@ -1,0 +1,17 @@
+.auth-form__link {
+  margin: 15px auto 0;
+  display: block;
+  width: max-content;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.auth-form__link:hover {
+  opacity: 0.6;
+}
