@@ -1,5 +1,6 @@
 const allowedCors = [
   'http://localhost:3001',
+  'http://temarazin.nomoredomains.xyz',
 ];
 
 const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
